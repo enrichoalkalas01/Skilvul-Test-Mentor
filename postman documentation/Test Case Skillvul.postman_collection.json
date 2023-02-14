@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "b8d72916-36be-4953-b228-7678dcaac066",
+		"name": "Test Case Skillvul",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13518879"
+	},
+	"item": [
+		{
+			"name": "Skillvul Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"admin\",\r\n    \"lastname\": \"123\",\r\n    \"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8800/api/v1/members/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"v1",
+						"members",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Skillvul Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin123\",\r\n    \"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8800/api/v1/members/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"v1",
+						"members",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Skillvul Member List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzYzMzk4NjAsImRhdGEiOnsiZmlyc3RuYW1lIjoiZW5yaWNobyIsImxhc3RuYW1lIjoiYWxrYWxhcyIsInVzZXJuYW1lIjoiZW5yaWNob2Fsa2FsYXMiLCJ0eXBlIjoiZnJlZSJ9LCJpYXQiOjE2NzYzMzYyNjB9.Q0J4XTPDbAojMdFGN_lVfums5zNA-GLFez-8m1vld5g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8800/api/v1/members",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"v1",
+						"members"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Member Exp",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzYzNjM3MzMsImRhdGEiOnsiZmlyc3RuYW1lIjoiZW5yaWNobyIsImxhc3RuYW1lIjoiYWxrYWxhc3MiLCJ1c2VybmFtZSI6ImVucmljaG9hbGthbGFzcyIsInR5cGUiOiJmcmVlIn0sImlhdCI6MTY3NjM2MDEzM30.krMeg070oGwTCgElLVbBoI8lClT4hCjEiebOtBf5pPM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "localhost:8800/api/v1/members/exp",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"v1",
+						"members",
+						"exp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Tags",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzYzNjYzMjcsImRhdGEiOnsiZmlyc3RuYW1lIjoiZW5yaWNobyIsImxhc3RuYW1lIjoiYWxrYWxhc3MiLCJ1c2VybmFtZSI6ImVucmljaG9hbGthbGFzcyIsInR5cGUiOiJmcmVlIn0sImlhdCI6MTY3NjM2MjcyN30.MEgkKChTIGNVi6Mad5K1nmWDXjTaVqKIcQJgaY5xC4k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"member_tag_name\": \"Jenderal\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8800/api/v1/members/tags",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"v1",
+						"members",
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upgrade Member",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzYzNjczMTQsImRhdGEiOnsiZmlyc3RuYW1lIjoiZW5yaWNobyIsImxhc3RuYW1lIjoiYWxrYWxhcyIsInVzZXJuYW1lIjoiZW5yaWNob2Fsa2FsYXMiLCJ0eXBlIjoiZnJlZSJ9LCJpYXQiOjE2NzYzNjM3MTR9.7jIk_xpO-ohskYqW2XJToNqHs4cqBdF8EXBQO63jp6s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "localhost:8800/api/v1/members/upgrade",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"v1",
+						"members",
+						"upgrade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Member",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzYzNjgwMjIsImRhdGEiOnsiZmlyc3RuYW1lIjoiZW5yaWNobyIsImxhc3RuYW1lIjoiYWxrYWxhc3MiLCJ1c2VybmFtZSI6ImVucmljaG9hbGthbGFzcyIsInR5cGUiOiJmcmVlIn0sImlhdCI6MTY3NjM2NDQyMn0.YKBWWUgSDmsl5mT4zpNBZWqu8YaIQXkub5b5qIkwPpE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8800/api/v1/members/",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"v1",
+						"members",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
